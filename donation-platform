@@ -21,3 +21,6 @@
     <p>با مشارکت شما، زندگی‌ها تغییر می‌کنند.</p>
 </body>
 </html>
+git add index.html
+git commit -m "افزودن فایل index.html برای GitHub Pages"
+git push origin main
