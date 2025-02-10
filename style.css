@@ -1,0 +1,29 @@
+/* تنظیمات کلی برای صفحه */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+/* استایل برای عنوان */
+h1 {
+    color: #007bff;
+}
+
+/* استایل برای دکمه کمک مالی */
+.btn {
+    display: inline-block;
+    background-color: #28a745;
+    color: white;
+    padding: 10px 20px;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 18px;
+    margin-top: 20px;
+}
+
+.btn:hover {
+    background-color: #218838;
+}
