@@ -25,13 +25,18 @@
 
     /* Navbar */
     .navbar{
+      position: sticky; top:0; z-index:10;
       background:rgba(0,0,0,.85);
-      padding:1rem;
-      display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+      backdrop-filter: saturate(140%) blur(6px);
+      padding:0.75rem 1rem;
+      box-shadow:0 4px 14px rgba(0,0,0,.25);
     }
-    .navbar img{height:40px}
-    .navbar a{color:#fff;text-decoration:none;margin:0 .8rem;font-weight:700}
-    .navbar a:hover{color:var(--gold)}
+    .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:16px}
+    .brand{display:flex;align-items:center;gap:10px}
+    .brand img{height:48px; width:auto; display:block; filter: drop-shadow(0 2px 4px rgba(255,215,0,.35));}
+    .brand-name{font-weight:800; letter-spacing:.2px; color:#fff}
+    .nav-links a{color:#fff;text-decoration:none;margin:0 .8rem;font-weight:700}
+    .nav-links a:hover{color:var(--gold)}
 
     /* Hero */
     .hero{text-align:center;padding:3rem 1rem}
@@ -45,7 +50,7 @@
     }
     .buttons a:hover{background:var(--gold-2);transform:scale(1.05)}
 
-    /* Section Boxes */
+    /* Sections */
     .section{
       background:#fff;color:#333;padding:2rem;border-radius:10px;
       margin:2rem auto;width:90%;max-width:850px;
@@ -92,27 +97,30 @@
     footer{background:rgba(0,0,0,.85);color:#fff;text-align:center;padding:1rem 0;font-size:.9rem}
     @media (max-width:600px){
       .hero h1{font-size:1.9rem}
-      .navbar{flex-direction:column;text-align:center}
+      .nav-links{margin-top:.5rem}
     }
   </style>
 </head>
 <body>
 
   <!-- Navbar -->
-  <div class="navbar">
-    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
-      <img src="logo.png" alt="Hewad Logo"/>
-      <div>
+  <header class="navbar">
+    <div class="container nav-inner">
+      <div class="brand">
+        <img src="logo.png" alt="Hewad Logo">
+        <span class="brand-name">Hewad Foundation</span>
+      </div>
+      <nav class="nav-links">
         <a href="#">Home</a>
         <a href="#help">Request Help</a>
         <a href="#donate">Donate</a>
         <a href="#contact">Contact</a>
-      </div>
+      </nav>
     </div>
-  </div>
+  </header>
 
   <!-- Hero -->
-  <div class="hero">
+  <section class="hero">
     <div class="container">
       <h1>Welcome to Hewad Foundation</h1>
       <p>Hewad Foundation is a nonprofit initiative dedicated to supporting Afghan refugee families around the world. Our mission is to provide hope, dignity, and essential support to those affected by crisis and displacement.</p>
@@ -121,10 +129,10 @@
         <a href="#donate">❤️ Volunteer / Donate</a>
       </div>
     </div>
-  </div>
+  </section>
 
   <!-- Request Help -->
-  <div id="help" class="section">
+  <section id="help" class="section">
     <h2>📌 Request Help</h2>
     <div class="info-box">
       <strong>📷 Please upload a photo of yourself or your living condition</strong><br/>
@@ -137,10 +145,10 @@
         📝 Open Help Request Form
       </a>
     </p>
-  </div>
+  </section>
 
   <!-- Donation -->
-  <div id="donate" class="section" style="background:#f6f8fb;color:#0f172a;">
+  <section id="donate" class="section" style="background:#f6f8fb;color:#0f172a;">
     <h2 style="color:#1e3c72;text-align:center;">💚 Donation Form</h2>
 
     <form action="https://formspree.io/f/xjkpnnrq" method="POST" class="form-card">
@@ -176,10 +184,10 @@
         <button type="submit" class="btn-primary-green">Submit Donation</button>
       </div>
     </form>
-  </div>
+  </section>
 
   <!-- How to Donate -->
-  <div class="section">
+  <section class="section">
     <h2>🌍 How to Donate from Outside Afghanistan</h2>
     <p>If you live in Europe, the USA, Canada, or other countries, please use one of the following methods:</p>
 
@@ -202,7 +210,7 @@
     </div>
 
     <p style="margin-top:20px;">After sending your donation, please share a screenshot or transfer code with our team via email or WhatsApp. Thank you for your generosity! 💚</p>
-  </div>
+  </section>
 
   <!-- Footer -->
   <footer id="contact">
