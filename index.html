@@ -33,9 +33,21 @@
     }
     .nav-inner{display:flex;justify-content:space-between;align-items:center;gap:16px}
     .brand{display:flex;align-items:center;gap:10px}
-    .brand img{height:48px; width:auto; display:block; filter: drop-shadow(0 2px 4px rgba(255,215,0,.35));}
-    .brand-name{font-weight:800; letter-spacing:.2px; color:#fff}
-    .nav-links a{color:#fff;text-decoration:none;margin:0 .8rem;font-weight:700}
+    .brand img{
+      height:60px;width:auto;display:block;
+      filter: drop-shadow(0 2px 4px rgba(255,215,0,.35));
+    }
+    .brand-name{
+      font-weight:800;
+      letter-spacing:.3px;
+      color:var(--gold);
+      font-size:1.25rem;
+      text-shadow:0 0 8px rgba(255,215,0,.25);
+    }
+    .nav-links a{
+      color:#fff;text-decoration:none;margin:0 .8rem;font-weight:700;
+      transition:color .2s ease;
+    }
     .nav-links a:hover{color:var(--gold)}
 
     /* Hero */
@@ -98,6 +110,8 @@
     @media (max-width:600px){
       .hero h1{font-size:1.9rem}
       .nav-links{margin-top:.5rem}
+      .brand-name{font-size:1.1rem}
+      .brand img{height:48px}
     }
   </style>
 </head>
