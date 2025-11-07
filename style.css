@@ -372,3 +372,82 @@ fieldset {
   text-align: center;
   white-space: nowrap;
 }
+/* Donation Form (Hewad Style) */
+.donation-section {
+  padding: 40px 0;
+  background: radial-gradient(900px 600px at 50% -10%, #135a3b 0%, #0c2017 45%, #09150f 100%);
+  color: #fff;
+}
+
+.donation-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #22c55e;
+}
+
+.fs-form {
+  max-width: 500px;
+  margin: 0 auto;
+  background-color: #0f2f23;
+  border: 1px solid #184231;
+  border-radius: 14px;
+  padding: 25px 30px;
+  box-shadow: 0 6px 16px rgba(0,0,0,0.25);
+}
+
+.fs-field {
+  margin-bottom: 18px;
+}
+
+.fs-label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: 600;
+  color: #c7f8e5;
+}
+
+.fs-input,
+.fs-textarea {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #1a5139;
+  border-radius: 8px;
+  background: #133726;
+  color: #e9fff3;
+  font-size: 15px;
+  outline: none;
+  transition: 0.2s border-color ease;
+}
+
+.fs-input:focus,
+.fs-textarea:focus {
+  border-color: #22c55e;
+  box-shadow: 0 0 0 2px rgba(34,197,94,0.3);
+}
+
+.fs-textarea {
+  min-height: 90px;
+  resize: vertical;
+}
+
+.fs-button-group {
+  text-align: center;
+  margin-top: 20px;
+}
+
+.fs-button {
+  background-color: #22c55e;
+  color: #072012;
+  border: none;
+  padding: 10px 22px;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.fs-button:hover {
+  background-color: #16a34a;
+  transform: scale(1.03);
+}
