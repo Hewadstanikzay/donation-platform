@@ -1,25 +1,148 @@
-<!DOCTYPE html>
-<html lang="fa">
+<!doctype html>
+<html lang="fa" dir="rtl">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Donation Platform</title>
-    <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hewad Foundation – Hope for Afghan Families</title>
+  <meta name="description" content="Connecting generous hearts with Afghan refugee families in need.">
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h2>فرم کمک مالی</h2>
-    <form action="process-donation.php" method="POST">
-        <label for="name">نام و نام خانوادگی:</label>
-        <input type="text" id="name" name="name" required>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <span class="logo">💚</span>
+        <span class="brand-name">Hewad</span>
+      </div>
+      <div class="lang">
+        <button id="lang-fa" class="lang-btn active">دری</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+      </div>
+    </div>
+  </header>
 
-        <label for="email">ایمیل:</label>
-        <input type="email" id="email" name="email" required>
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-icon">💚</div>
+      <h1 class="t t-fa">هیواد – امید برای خانواده‌های افغان</h1>
+      <h1 class="t t-en">Hewad – Hope for Afghan Families</h1>
+      <p class="t t-fa">
+        دست‌های بخشنده را به خانواده‌های مهاجر و نیازمند افغان وصل می‌کنیم. با هم امید را می‌سازیم و آغازهای نو می‌آفرینیم.
+      </p>
+      <p class="t t-en">
+        We connect generous hearts with Afghan families in need. Together, we rebuild hope and create new beginnings.
+      </p>
+      <div class="hero-actions">
+        <!-- TODO: این لینک‌ها را با فرم‌های واقعی خودت عوض کن -->
+        <a class="btn btn-primary t t-fa" href="https://forms.gle/your-donation-form" target="_blank" rel="noopener">💚 کمک مالی</a>
+        <a class="btn btn-ghost t t-fa" href="https://forms.gle/your-register-form" target="_blank" rel="noopener">📋 ثبت خانواده</a>
 
-        <label for="amount">مبلغ کمک (به افغانی):</label>
-        <input type="number" id="amount" name="amount" required>
+        <a class="btn btn-primary t t-en" href="https://forms.gle/your-donation-form" target="_blank" rel="noopener">💚 Make a Donation</a>
+        <a class="btn btn-ghost t t-en" href="https://forms.gle/your-register-form" target="_blank" rel="noopener">📋 Register Family</a>
+      </div>
+    </div>
+  </section>
 
-        <button type="submit">ارسال کمک</button>
-    </form>
+  <!-- Mission -->
+  <section class="mission">
+    <div class="container">
+      <h2 class="section-title t t-fa">ماموریت ما</h2>
+      <h2 class="section-title t t-en">Our Mission</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-media skeleton" aria-hidden="true"></div>
+          <div class="card-body">
+            <h3 class="t t-fa">حمایت از خانواده‌ها</h3>
+            <h3 class="t t-en">Support Families</h3>
+            <p class="t t-fa">
+              با خانواده‌های پناهجوی افغان کار می‌کنیم تا نیازهای ضروری چون مسکن، غذا، مراقبت‌های بهداشتی و آموزش فراهم شود.
+            </p>
+            <p class="t t-en">
+              We support Afghan refugee families to access essentials like shelter, food, healthcare, and education.
+            </p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-media skeleton" aria-hidden="true"></div>
+          <div class="card-body">
+            <h3 class="t t-fa">ساختن جامعه</h3>
+            <h3 class="t t-en">Community Building</h3>
+            <p class="t t-fa">
+              با شبکه‌ای از داوطلبان و خیرین، برنامه‌های حمایتی ایجاد می‌کنیم تا خانواده‌ها توانمند شوند و آیندهٔ بهتر بسازند.
+            </p>
+            <p class="t t-en">
+              With volunteers and donors, we build support networks that empower families to thrive.
+            </p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- CTA strip -->
+  <section class="cta">
+    <div class="container cta-inner">
+      <div>
+        <h3 class="t t-fa">می‌خواهی سهمی در امید داشته باشی؟</h3>
+        <h3 class="t t-en">Want to share hope?</h3>
+        <p class="t t-fa">با یک کمک کوچک، تفاوت بزرگ بساز.</p>
+        <p class="t t-en">Your small contribution makes a big difference.</p>
+      </div>
+      <div>
+        <a class="btn btn-primary t t-fa" href="https://forms.gle/your-donation-form" target="_blank" rel="noopener">💚 همین حالا کمک کن</a>
+        <a class="btn btn-primary t t-en" href="https://forms.gle/your-donation-form" target="_blank" rel="noopener">💚 Donate Now</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">Hewad Foundation</div>
+      <div class="foot-links">
+        <a href="#" onclick="alert('contact@hewad.org'); return false;">Contact</a>
+        <a href="#" onclick="alert('Privacy Policy coming soon'); return false;">Privacy</a>
+        <a href="https://github.com/hewadstanikzay/donation-platform" target="_blank" rel="noopener">GitHub</a>
+      </div>
+      <div class="foot-copy t t-fa">© همهٔ حقوق محفوظ است.</div>
+      <div class="foot-copy t t-en">© All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    // زبان پیش‌فرض: دری
+    const setLang = (lang) => {
+      const fa = document.querySelectorAll('.t-fa');
+      const en = document.querySelectorAll('.t-en');
+      const faBtn = document.getElementById('lang-fa');
+      const enBtn = document.getElementById('lang-en');
+
+      if (lang === 'fa') {
+        document.documentElement.lang = 'fa';
+        document.documentElement.dir = 'rtl';
+        fa.forEach(el => el.style.display = '');
+        en.forEach(el => el.style.display = 'none');
+        faBtn.classList.add('active');
+        enBtn.classList.remove('active');
+      } else {
+        document.documentElement.lang = 'en';
+        document.documentElement.dir = 'ltr';
+        fa.forEach(el => el.style.display = 'none');
+        en.forEach(el => el.style.display = '');
+        enBtn.classList.add('active');
+        faBtn.classList.remove('active');
+      }
+    };
+
+    document.getElementById('lang-fa').addEventListener('click', () => setLang('fa'));
+    document.getElementById('lang-en').addEventListener('click', () => setLang('en'));
+
+    // شروع با دری
+    setLang('fa');
+  </script>
 </body>
 </html>
-
