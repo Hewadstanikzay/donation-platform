@@ -1,59 +1,159 @@
-<form
-  action="https://formspree.io/f/{FORM_ID}"
-  class="fs-form"
-  target="_top"
-  method="POST"
->
-  <div class="fs-field">
-    <label class="fs-label" for="full-name">Full Name</label>
-    <input
-      class="fs-input"
-      id="full-name"
-      name="full-name"
-      placeholder="Enter your full name"
-      required
-    />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email</label>
-    <input
-      class="fs-input"
-      id="email"
-      name="email"
-      placeholder="Enter your email address"
-      required
-    />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="phone-number">Phone Number</label>
-    <input
-      class="fs-input"
-      id="phone-number"
-      name="phone-number"
-      placeholder="Enter your phone number"
-      required
-    />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="amount">Donation Amount</label>
-    <input
-      class="fs-input"
-      id="amount"
-      name="amount"
-      placeholder="Enter the amount you wish to donate"
-      required
-    />
-  </div>
-  <div class="fs-field">
-    <label class="fs-label" for="message">Message</label>
-    <textarea
-      class="fs-textarea"
-      id="message"
-      name="message"
-      placeholder="Write a message or note (optional)"
-    ></textarea>
-  </div>
-  <div class="fs-button-group">
-    <button class="fs-button" type="submit">Submit</button>
-  </div>
-</form>
+<!doctype html>
+<html lang="fa" dir="rtl">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hewad Foundation – Hope for Afghan Families</title>
+  <meta name="description" content="Connecting generous hearts with Afghan refugee families in need.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Top Bar -->
+  <header class="topbar">
+    <div class="container topbar-inner">
+      <div class="brand">
+        <span class="logo">💚</span>
+        <span class="brand-name">Hewad</span>
+      </div>
+      <div class="lang">
+        <button id="lang-fa" class="lang-btn active">دری</button>
+        <button id="lang-en" class="lang-btn">EN</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section class="hero">
+    <div class="container hero-inner">
+      <div class="hero-icon">💚</div>
+      <h1 class="t t-fa">هیواد – امید برای خانواده‌های افغان</h1>
+      <h1 class="t t-en">Hewad – Hope for Afghan Families</h1>
+      <p class="t t-fa">
+        دست‌های بخشنده را به خانواده‌های مهاجر و نیازمند افغان وصل می‌کنیم. با هم امید را می‌سازیم و آغازهای نو می‌آفرینیم.
+      </p>
+      <p class="t t-en">
+        We connect generous hearts with Afghan families in need. Together, we rebuild hope and create new beginnings.
+      </p>
+      <div class="hero-actions">
+        <a class="btn btn-primary t t-fa" href="#donation-form">💚 کمک مالی</a>
+        <a class="btn btn-primary t t-en" href="#donation-form">💚 Make a Donation</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section class="mission">
+    <div class="container">
+      <h2 class="section-title t t-fa">ماموریت ما</h2>
+      <h2 class="section-title t t-en">Our Mission</h2>
+
+      <div class="cards">
+        <article class="card">
+          <div class="card-body">
+            <h3 class="t t-fa">حمایت از خانواده‌ها</h3>
+            <h3 class="t t-en">Support Families</h3>
+            <p class="t t-fa">با خانواده‌های پناهجوی افغان کار می‌کنیم تا نیازهای ضروری چون مسکن، غذا، مراقبت‌های بهداشتی و آموزش فراهم شود.</p>
+            <p class="t t-en">We support Afghan refugee families to access essentials like shelter, food, healthcare, and education.</p>
+          </div>
+        </article>
+
+        <article class="card">
+          <div class="card-body">
+            <h3 class="t t-fa">ساختن جامعه</h3>
+            <h3 class="t t-en">Community Building</h3>
+            <p class="t t-fa">با شبکه‌ای از داوطلبان و خیرین، برنامه‌های حمایتی ایجاد می‌کنیم تا خانواده‌ها توانمند شوند و آیندهٔ بهتر بسازند.</p>
+            <p class="t t-en">With volunteers and donors, we build support networks that empower families to thrive.</p>
+          </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Donation Form Section -->
+  <section id="donation-form" class="donation-section">
+    <div class="container">
+      <h2 class="t t-fa">فرم کمک مالی</h2>
+      <h2 class="t t-en">Donation Form</h2>
+
+      <form action="https://formspree.io/f/YOUR_FORM_ID" method="POST" class="fs-form">
+        <div class="fs-field">
+          <label class="fs-label t t-fa" for="full-name">نام کامل</label>
+          <label class="fs-label t t-en" for="full-name">Full Name</label>
+          <input class="fs-input" id="full-name" name="full-name" required>
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label t t-fa" for="email">ایمیل</label>
+          <label class="fs-label t t-en" for="email">Email</label>
+          <input class="fs-input" id="email" name="email" type="email" required>
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label t t-fa" for="phone-number">شماره تلفن</label>
+          <label class="fs-label t t-en" for="phone-number">Phone Number</label>
+          <input class="fs-input" id="phone-number" name="phone-number" required>
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label t t-fa" for="amount">مبلغ کمک</label>
+          <label class="fs-label t t-en" for="amount">Donation Amount</label>
+          <input class="fs-input" id="amount" name="amount" required>
+        </div>
+
+        <div class="fs-field">
+          <label class="fs-label t t-fa" for="message">پیام</label>
+          <label class="fs-label t t-en" for="message">Message</label>
+          <textarea class="fs-textarea" id="message" name="message"></textarea>
+        </div>
+
+        <div class="fs-button-group">
+          <button class="fs-button t t-fa" type="submit">ارسال</button>
+          <button class="fs-button t t-en" type="submit">Submit</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-inner">
+      <div class="foot-brand">Hewad Foundation</div>
+      <div class="foot-links">
+        <a href="#" onclick="alert('contact@hewad.org'); return false;">Contact</a>
+        <a href="#" onclick="alert('Privacy Policy coming soon'); return false;">Privacy</a>
+      </div>
+      <div class="foot-copy t t-fa">© همهٔ حقوق محفوظ است.</div>
+      <div class="foot-copy t t-en">© All rights reserved.</div>
+    </div>
+  </footer>
+
+  <script>
+    const setLang = (lang) => {
+      const fa = document.querySelectorAll('.t-fa');
+      const en = document.querySelectorAll('.t-en');
+      const faBtn = document.getElementById('lang-fa');
+      const enBtn = document.getElementById('lang-en');
+
+      if (lang === 'fa') {
+        document.documentElement.lang = 'fa';
+        document.documentElement.dir = 'rtl';
+        fa.forEach(el => el.style.display = '');
+        en.forEach(el => el.style.display = 'none');
+        faBtn.classList.add('active');
+        enBtn.classList.remove('active');
+      } else {
+        document.documentElement.lang = 'en';
+        document.documentElement.dir = 'ltr';
+        fa.forEach(el => el.style.display = 'none');
+        en.forEach(el => el.style.display = '');
+        enBtn.classList.add('active');
+        faBtn.classList.remove('active');
+      }
+    };
+
+    document.getElementById('lang-fa').addEventListener('click', () => setLang('fa'));
+    document.getElementById('lang-en').addEventListener('click', () => setLang('en'));
+    setLang('fa');
+  </script>
+</body>
+</html>
