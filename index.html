@@ -1,59 +1,216 @@
-<form
-  action="https://formspree.io/f/{FORM_ID}"
-  class="fs-form"
-  target="_top"
-  method="POST"
->
-  <div class="fs-field">
-    <label class="fs-label" for="full-name">Full Name</label>
-    <input
-      class="fs-input"
-      id="full-name"
-      name="full-name"
-      placeholder="Enter your full name"
-      required
-    />
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Hewad Foundation – Hope for Afghan Families</title>
+
+  <style>
+    :root{
+      --bg-top:#1e3c72; --bg-bottom:#2a5298;
+      --gold:#ffd700; --gold-2:#ffe44d;
+      --ink:#0f172a; --muted:#334155;
+      --card:#ffffff; --card-border:#e6e8ec;
+      --input:#fafbfd; --input-border:#d6dae1;
+      --green:#22c55e; --green-2:#16a34a;
+    }
+    *{box-sizing:border-box}
+    html,body{margin:0;padding:0}
+    body{
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to bottom,var(--bg-top),var(--bg-bottom));
+      color:#fff; line-height:1.6;
+    }
+    .container{width:min(92%,1080px); margin-inline:auto}
+
+    /* Navbar */
+    .navbar{
+      background:rgba(0,0,0,.85);
+      padding:1rem;
+      display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;
+    }
+    .navbar img{height:40px}
+    .navbar a{color:#fff;text-decoration:none;margin:0 .8rem;font-weight:700}
+    .navbar a:hover{color:var(--gold)}
+
+    /* Hero */
+    .hero{text-align:center;padding:3rem 1rem}
+    .hero h1{font-size:2.4rem;margin-bottom:1rem;color:var(--gold)}
+    .hero p{font-size:1.15rem;max-width:680px;margin:0 auto;color:#f1f1f1}
+    .buttons{margin-top:2rem}
+    .buttons a{
+      display:inline-block;margin:.5rem;padding:.8rem 1.5rem;
+      background:var(--gold);color:#000;border-radius:6px;text-decoration:none;font-weight:700;
+      transition:transform .15s ease, background .2s ease;
+    }
+    .buttons a:hover{background:var(--gold-2);transform:scale(1.05)}
+
+    /* Section Boxes */
+    .section{
+      background:#fff;color:#333;padding:2rem;border-radius:10px;
+      margin:2rem auto;width:90%;max-width:850px;
+      box-shadow:0 4px 12px rgba(0,0,0,.25);
+    }
+    .section h2{color:#1e3c72;text-align:center;margin-top:0}
+
+    .info-box,.contact-box{padding:15px;border-radius:8px;margin-top:15px}
+    .info-box{background:#e7f6f9;border-left:6px solid #0c5460}
+    .contact-box{background:#fdeaea;border-left:6px solid #721c24}
+
+    /* Donation Form */
+    .form-card{
+      background:var(--card);color:#222;border:1px solid var(--card-border);
+      border-radius:14px;padding:22px;width:100%;max-width:650px;margin:0 auto;
+      box-shadow:0 10px 24px rgba(0,0,0,.08);
+    }
+    .form-grid{display:grid;gap:14px;grid-template-columns:1fr 1fr}
+    @media (max-width:720px){.form-grid{grid-template-columns:1fr}}
+    .form-field{display:grid;gap:6px}
+    .form-label{font-weight:700;color:var(--muted)}
+    .form-input,.form-textarea{
+      width:100%;padding:12px 14px;border:1px solid var(--input-border);
+      border-radius:10px;background:var(--input);font-size:15px;outline:none;
+      transition:border-color .15s, box-shadow .15s, background .15s;
+    }
+    .form-input:focus,.form-textarea:focus{
+      border-color:#5bd28a;box-shadow:0 0 0 3px rgba(34,197,94,.25);background:#fff;
+    }
+    .form-textarea{min-height:110px;resize:vertical}
+    .form-actions{display:flex;gap:12px;justify-content:flex-end;margin-top:10px}
+    .btn-ghost{
+      background:#f5f7fa;color:var(--ink);border:1px solid #e2e8f0;
+      padding:12px 18px;border-radius:10px;font-weight:700;cursor:pointer;
+    }
+    .btn-primary-green{
+      background:var(--green);color:#072012;border:1px solid var(--green-2);
+      padding:12px 18px;border-radius:10px;font-weight:800;cursor:pointer;
+      transition:transform .1s, background .2s;
+    }
+    .btn-primary-green:hover{background:var(--green-2);transform:translateY(-1px)}
+
+    /* Footer */
+    footer{background:rgba(0,0,0,.85);color:#fff;text-align:center;padding:1rem 0;font-size:.9rem}
+    @media (max-width:600px){
+      .hero h1{font-size:1.9rem}
+      .navbar{flex-direction:column;text-align:center}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <div class="navbar">
+    <div class="container" style="display:flex;justify-content:space-between;align-items:center;gap:10px;">
+      <img src="logo.png" alt="Hewad Logo"/>
+      <div>
+        <a href="#">Home</a>
+        <a href="#help">Request Help</a>
+        <a href="#donate">Donate</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </div>
   </div>
-  <div class="fs-field">
-    <label class="fs-label" for="email">Email</label>
-    <input
-      class="fs-input"
-      id="email"
-      name="email"
-      placeholder="Enter your email address"
-      required
-    />
+
+  <!-- Hero -->
+  <div class="hero">
+    <div class="container">
+      <h1>Welcome to Hewad Foundation</h1>
+      <p>Hewad Foundation is a nonprofit initiative dedicated to supporting Afghan refugee families around the world. Our mission is to provide hope, dignity, and essential support to those affected by crisis and displacement.</p>
+      <div class="buttons">
+        <a href="#help">📋 Request Help</a>
+        <a href="#donate">❤️ Volunteer / Donate</a>
+      </div>
+    </div>
   </div>
-  <div class="fs-field">
-    <label class="fs-label" for="phone-number">Phone Number</label>
-    <input
-      class="fs-input"
-      id="phone-number"
-      name="phone-number"
-      placeholder="Enter your phone number"
-      required
-    />
+
+  <!-- Request Help -->
+  <div id="help" class="section">
+    <h2>📌 Request Help</h2>
+    <div class="info-box">
+      <strong>📷 Please upload a photo of yourself or your living condition</strong><br/>
+      Your information will only be used to assess your needs and will remain confidential within the Hewad Charity team.
+    </div>
+    <p style="text-align:center">
+      <a href="https://docs.google.com/forms/d/e/1FAIpQLSe5fyWFRBmSn0s3tFHVUisFSoPizp5Mb_yI6r9Ihnc6t7m-cA/viewform?usp=dialog"
+         target="_blank"
+         style="display:inline-block;background:#ffd700;color:#000;font-weight:bold;padding:15px 30px;border-radius:10px;text-decoration:none;box-shadow:0 4px 6px rgba(0,0,0,.3);">
+        📝 Open Help Request Form
+      </a>
+    </p>
   </div>
-  <div class="fs-field">
-    <label class="fs-label" for="amount">Donation Amount</label>
-    <input
-      class="fs-input"
-      id="amount"
-      name="amount"
-      placeholder="Enter the amount you wish to donate"
-      required
-    />
+
+  <!-- Donation -->
+  <div id="donate" class="section" style="background:#f6f8fb;color:#0f172a;">
+    <h2 style="color:#1e3c72;text-align:center;">💚 Donation Form</h2>
+
+    <form action="https://formspree.io/f/xjkpnnrq" method="POST" class="form-card">
+      <div class="form-grid">
+        <div class="form-field">
+          <label class="form-label" for="name">Full Name</label>
+          <input class="form-input" id="name" name="name" required placeholder="Your full name"/>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="email">Email</label>
+          <input class="form-input" id="email" name="email" type="email" required placeholder="you@example.com"/>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="amount">Donation Amount (AFN)</label>
+          <input class="form-input" id="amount" name="amount" type="number" min="0" required placeholder="e.g. 5000"/>
+        </div>
+
+        <div class="form-field">
+          <label class="form-label" for="phone">Phone (optional)</label>
+          <input class="form-input" id="phone" name="phone" placeholder="+93 … / +49 …"/>
+        </div>
+      </div>
+
+      <div class="form-field" style="margin-top:10px;">
+        <label class="form-label" for="message">Message (optional)</label>
+        <textarea class="form-textarea" id="message" name="message" placeholder="Write a note or instruction…"></textarea>
+      </div>
+
+      <div class="form-actions">
+        <button type="reset" class="btn-ghost">Clear</button>
+        <button type="submit" class="btn-primary-green">Submit Donation</button>
+      </div>
+    </form>
   </div>
-  <div class="fs-field">
-    <label class="fs-label" for="message">Message</label>
-    <textarea
-      class="fs-textarea"
-      id="message"
-      name="message"
-      placeholder="Write a message or note (optional)"
-    ></textarea>
+
+  <!-- How to Donate -->
+  <div class="section">
+    <h2>🌍 How to Donate from Outside Afghanistan</h2>
+    <p>If you live in Europe, the USA, Canada, or other countries, please use one of the following methods:</p>
+
+    <div class="info-box">
+      <h3>💳 Recommended Methods:</h3>
+      <ul>
+        <li><strong>MoneyGram</strong> – Send to our local representative</li>
+        <li><strong>Western Union</strong> – Direct transfer to Kabul</li>
+        <li><strong>Bank Transfer</strong> – Available from Europe (details upon request)</li>
+      </ul>
+    </div>
+
+    <div class="contact-box">
+      <h3>📇 Recipient Details:</h3>
+      <ul>
+        <li><strong>Recipient Name:</strong> Ahmadullah (for current project)</li>
+        <li><strong>Location:</strong> Kabul, Afghanistan</li>
+        <li><strong>WhatsApp:</strong> +93 XXXXXXXX</li>
+      </ul>
+    </div>
+
+    <p style="margin-top:20px;">After sending your donation, please share a screenshot or transfer code with our team via email or WhatsApp. Thank you for your generosity! 💚</p>
   </div>
-  <div class="fs-button-group">
-    <button class="fs-button" type="submit">Submit</button>
-  </div>
-</form>
+
+  <!-- Footer -->
+  <footer id="contact">
+    <div class="container">
+      <p>📧 contact@hewad.org · 🌐 hewadstanikzay.github.io/donation-platform</p>
+      <p>© 2025 Hewad Foundation – All Rights Reserved</p>
+    </div>
+  </footer>
+
+</body>
+</html>
